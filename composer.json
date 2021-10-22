@@ -2,11 +2,19 @@
     "name": "renatoaugustofs/alura-webscraping-php",
     "description": "Projeto que busca os cursos no site da Alura",
     "type": "library",
+
     "autoload": {
         "psr-4": {
             "Alura\\WebScraping\\": "src/"
-        }
+        },
+        "classmap": [
+            "./ClassMapTest.php"
+        ],
+        "files": [
+            "./functions.php"
+        ]
     },
+
     "authors": [
         {
             "name": "Renato Augusto",
