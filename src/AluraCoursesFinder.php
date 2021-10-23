@@ -17,16 +17,16 @@ class AluraCoursesFinder
         $this->crawler = $crawler;
     }
 
-    public function find(string $url, string $tagHtml): array
+    public function find(string $url): array
     {
-            $response = $this->client->request('GET', $url);
-            $html = $response->getBody();
-            $this->crawler->addHtmlContent($html);
-            $courses = $this->crawler->filter($tagHtml);
-            $coursesList = [];
-            foreach ($courses as $course){
-                $coursesList[] = $course->textContent;
-            }
-            return $coursesList;
+        $response = $this->client->request('GET', $url);
+        $html = $response->getBody();
+        $this->crawler->addHtmlContent($html);
+        $courses = $this->crawler->filter('p.formacao-passo-nome');
+        $coursesList = [];
+        foreach ($courses as $course) {
+            $coursesList[] = $course->textContent;
+        }
+        return $coursesList;
     }
 }

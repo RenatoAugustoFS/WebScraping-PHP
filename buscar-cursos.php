@@ -13,9 +13,8 @@ $crawler = new Crawler();
 
 $coursesFinder = new AluraCoursesFinder($client, $crawler);
 $url = '/formacao-arquiteto-php';
-$tagHtml = 'p.formacao-passo-nome';
 
-$courses = $coursesFinder->find($url, $tagHtml);
+$courses = $coursesFinder->find($url);
 
 foreach ($courses as $course){
     exibeMensagem($course);
