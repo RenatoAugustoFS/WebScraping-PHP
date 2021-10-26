@@ -38,7 +38,7 @@
         "remove-cache": "rm -rf cache",
 
         "check": [
-            "@clear-cache",
+            "@remove-cache",
             "@phan",
             "@code-snifer",
             "@test"
