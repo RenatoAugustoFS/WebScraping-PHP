@@ -51,5 +51,9 @@
 
     "scripts-descriptions": {
         "check": "Roda as verificações de código. LIMPA CACHE, PHAN, PHPCS & PHPUNIT"
-    }
+    },
+
+    "license": "GPL-3.0",
+
+    "bin": "buscar-cursos.php"
 }
