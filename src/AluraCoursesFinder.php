@@ -21,8 +21,7 @@ class AluraCoursesFinder
     {
         $response = $this->client->request('GET', $url);
         $html = $response->getBody();
-        $this->crawler->addHtmlContent(
-            $html);
+        $this->crawler->addHtmlContent($html);
         $courses = $this->crawler->filter('p.formacao-passo-nome');
         $coursesList = [];
         foreach ($courses as $course) {
